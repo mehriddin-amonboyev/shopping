@@ -1,4 +1,5 @@
 import { DataSource } from "typeorm"
+import { RedisService } from "./redis.service";
 
 export const databaseProviders = [
     {
@@ -17,4 +18,8 @@ export const databaseProviders = [
             return dataSource.initialize();
         },
     },
+    {
+        provide: 'REDIS_SERVICE',
+        useClass: RedisService,
+    }
 ];

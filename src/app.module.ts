@@ -19,10 +19,10 @@ import { DatabaseModule } from './database';
       envFilePath:'.env',
       load:[appConfig]
     }),
-    RedisModule.forRoot({
-      type:'single',
-      url:'redis://localahost:6379'
-    }),
+    // RedisModule.forRoot({
+    //   type:'single',
+    //   url:'redis://localahost:6379'
+    // }),
     DatabaseModule,
     CliModule, 
     UserModule,
@@ -34,4 +34,3 @@ import { DatabaseModule } from './database';
   providers: [],
 })
 export class AppModule {}
-//

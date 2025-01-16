@@ -1,0 +1,38 @@
+services:
+  # nestjs:
+  #   container_name: green_house
+  #   build:
+  #     context: .
+  #   working_dir: /usr/src/app
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - .:/usr/src/app
+  #     - /usr/src/app/node_modules
+  #   depends_on:
+  #     - postgres
+  #   env_file:
+  #     - .env
+  #   restart: unless-stopped
+  #   command: npm run start:dev
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Mehriddin
+      POSTGRES_DB: shopping
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    
+
+  redis:
+    image: redis
+    port: 
+      - '6379:6379'
+
+networks:
+  postgres:
+    driver: bridge

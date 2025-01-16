@@ -1,11 +1,13 @@
 {
   "dependencies": {
+    "@nestjs-modules/ioredis": "^2.0.2",
     "@nestjs/common": "^10.4.15",
     "@nestjs/config": "^3.3.0",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.4.15",
     "@nestjs/typeorm": "^10.0.2",
     "commander": "^13.0.0",
+    "ioredis": "^5.4.2",
     "nestjs": "^0.0.1",
     "pg": "^8.13.1",
     "typeorm": "^0.3.20"

@@ -7,7 +7,9 @@ async function startshop() {
   const configService = app.get(ConfigService)
   await app.listen(
     configService.get<number>('appConfig.port'),
-    configService.get<string>('appConfig.host')
+    configService.get<string>('appConfig.host'), (): void => {
+      console.log(`Server started on ${configService.get<string>('appConfig.host')}:${configService.get<number>('appConfig.port')}`)  
+    }
   );
 }
 startshop();
